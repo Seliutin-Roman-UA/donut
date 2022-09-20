@@ -1,0 +1,162 @@
+.registration {
+  background-color: rgba(189, 189, 189, 0.2);
+  padding-top: 40px;
+  padding-bottom: 8px;
+  text-align: center;
+  @media screen and (min-width: 767.99px) { padding-top: 80px;
+}
+ @media screen and (min-width: 1279.99px) { padding-top: 100px;}}
+.registration__header {
+  font-family: "Montserrat Alternates";
+  font-weight: 600;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.registration__form {
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/reg_form_bg.png");
+
+  @media screen and (min-width: 767.99px) {
+    position: relative;
+    height: 246px;
+    background-image: url("../images/reg-bg1.png"),
+      linear-gradient(360deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("../images/reg-bg0.png");
+    background-size: auto, auto, auto;
+    background-position: top left, center, top right;
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+    padding-top: 32px;
+    padding-left: 62px;
+    padding-right: 40px;
+  }
+
+  @media screen and (min-width: 1279.99px) {
+    position: relative;
+    width: 1034px;
+    height: 246px;
+    background-image: url("../images/reg-bg10.png"),
+      linear-gradient(360deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("../images/reg-bg0.png");
+
+    padding-bottom: 40px;
+    padding-top: 32px;
+    padding-left: 212px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding-bottom: 32px;
+  padding-top: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
+}
+.wrapper1__registration_form {
+  @media screen and (min-width: 767.99px) {
+    width: 93px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: right;
+    color: #000000;
+    &::before {
+      position: absolute;
+      left: 23px;
+      bottom: 20px;
+      content: "";
+      width: 100px;
+      height: 66px;
+
+      @media screen and (min-width: 1279.99px) {
+        width: 200px;
+        height: 132px;
+      }
+      background-image: url("../images/reg-dec.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 184px;
+      bottom: 32px;
+      height: 153px;
+      width: 1px;
+      background-color: rgba(0, 0, 0, 0.5);
+      @media screen and (min-width: 1279.99px) {
+        left: 332px;
+      }
+    }
+  }
+}
+.wrapper2__registration_form {
+  @media screen and (min-width: 767.99px) {
+    color: #000000;
+    margin-left: 56px;
+  }
+  @media screen and (min-width: 1279.99px) {
+    width: 258px;
+  }
+}
+.registration__place {
+  @media screen and (max-width: 767.99px) {
+    &::after {
+      content: "";
+      display: block;
+      background-color: #fff;
+      width: 100%;
+      height: 1px;
+      margin: 20px 0;
+    }
+  }
+}
+
+.registration_header {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  @media screen and (min-width: 767.99px) {
+    text-align: left;
+  }
+}
+
+.registration_input {
+  display: block;
+  margin-top: 20px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  width: 100%;
+  padding: 0 0 0 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Montserrat";
+  &::placeholder {
+    font-family: "Montserrat";
+    color: inherit;
+    font-size: 16px;
+  }
+  @media screen and (min-width: 767.99px) {
+    border-bottom: 1px solid #000000;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+.registration__button {
+  margin-top: 40px;
+  @media screen and (min-width: 767.99px) {
+    margin-left: 120px;
+    margin-top: 0px;
+  }
+  @media screen and (min-width: 767.99px) {
+    margin-left: 40px;
+  }
+}

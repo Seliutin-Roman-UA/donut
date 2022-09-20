@@ -1,0 +1,116 @@
+.contact {
+  background-color: rgba(189, 189, 189, 0.2);
+  padding-top: 40px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.conteiner.contact__conteiner {
+  @media screen and (min-width: 767.99px) {
+    width: 340px;
+     @media screen and (min-width: 767.99px) {
+    width: 394px;
+  }
+  }
+}
+
+.contact__header {
+  font-family: "Montserrat Alternates";
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contact__text {
+  margin-top: 27px;
+}
+.contact__label {
+  display: flex;
+  margin-top: 20px;
+  border-bottom: 1px solid #000;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.contact__input {
+  flex: 1 1;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 0 0 0 10px;
+}
+.contact__question {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  padding: 0;
+  &::placeholder {
+    padding: 0;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+.contact__question::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+}
+.contact_button {
+  margin-top: 30px;
+  @media screen and (min-width: 767.99px) {
+    margin-top: 36px;
+  }
+}
+.contact-wrapper {
+  margin-top: 40px;
+  @media screen and (min-width: 767.99px) {
+    display: flex;
+    justify-content: space-between;
+    width: 704px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.contact__tel {
+  color: inherit;
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    width: 13px;
+    height: 13px;
+    background-image: (url(../images/tel.svg));
+  }
+}
+.contact__adress {
+  color: inherit;
+  margin-left: 60px;
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    width: 11px;
+    height: 14px;
+    background-image: (url(../images/geomark.svg));
+  }
+}
+.contact__final {
+  width: 60px;
+  height: 40px;
+  background-image: url(../images/two-donats.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+.solial-net.contact__solial-net {
+  @media screen and (min-width: 767.99px) {
+    justify-content: center;
+    margin-bottom: 36px;
+  }
+}

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Donut</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="conteiner conteiner__header">
+        <nav class="main-navigation">
+          <span class="logo">
+            <a class="logo__link" href="./index.html">
+              <svg class="logo__icon">
+                <use href="./images/symbol-defs.svg#icon-logo"></use>
+              </svg>
+            </a>
+          </span>
+
+          <ul class="main-navigavion-list">
+            <li class="main-navigation-item">
+              <a href="#aboutUs"> About us</a>
+            </li>
+            <li class="main-navigation-item"><a href="#program">Program</a></li>
+            <li class="main-navigation-item">
+              <a href="#speaker"> Speaker</a>
+            </li>
+            <li class="main-navigation-item"><a href="#price"> Price</a></li>
+            <li class="main-navigation-item"><a href="#peviws"> Reviws</a></li>
+            <li class="main-navigation-item">
+              <a href="#contact"> Contact</a>
+            </li>
+          </ul>
+
+          <div class="burger-menu bm__transform_0">
+            <svg class="burger-menu__icon-burger" width="30px" height="16px">
+              <use href="./images/symbol-defs.svg#icon-bm"></use>
+            </svg>
+            <svg class="burger-menu__icon-close" width="19px" height="19px">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </div>
+        </nav>
+
+        <script>
+          const btn__bm = document.querySelector(".burger-menu");
+          const menu = document.querySelector(".main-navigavion-list");
+          const logo = document.querySelector(".logo");
+
+          btn__bm.addEventListener("click", (event) => {
+            menu.classList.toggle("open-menu");
+            setTimeout(() => btn__bm.classList.toggle("z-index__3"), 500);
+            setTimeout(() => logo.classList.toggle("z-index__3"), 500);
+            setTimeout(() => btn__bm.classList.toggle("bm__transform"), 500);
+            document.body.classList.toggle("scroll");
+          });
+          document
+            .querySelector(".main-navigavion-list")
+            .addEventListener("click", (e) => {
+
+              console.log(e.target.nodeName);
+              if (e.target.nodeName !== "A") return;
+              menu.classList.remove("open-menu");
+              document.body.classList.remove("scroll");
+              btn__bm.classList.remove("z-index__3");
+              logo.classList.remove("z-index__3");
+              btn__bm.classList.remove("bm__transform");
+
+            });
+        </script>
+
+        <h1 class="header_header">
+          Donut Masterclass <br />
+          with the Donut King
+        </h1>
+        <h2 class="header__sudheader">Hosted by Eva Green</h2>
+        <button class="button" type="button">Register</button>
+        <ul class="solial-net">
+          <li class="social-net__item">
+            <svg class="solial-net__icon" width="16px" height="16px">
+              <use href="./images/symbol-defs.svg#icon-twitter"></use>
+            </svg>
+          </li>
+          <li class="social-net__item">
+            <svg class="solial-net__icon" width="16px" height="16px">
+              <use href="./images/symbol-defs.svg#icon-instagram"></use>
+            </svg>
+          </li>
+          <li class="social-net__item">
+            <svg class="solial-net__icon" width="16px" height="16px">
+              <use href="./images/symbol-defs.svg#icon-facebook"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <!-- О НАС  -->
+      <section class="about-us" id="aboutUs">
+        <div class="conteiner about-us__conteiner">
+          <picture class="about-us__image">
+            <source
+              srcset="./images/about-us-image2.png"
+              media="(min-width:1280px)"
+            />
+            <img
+              class="about-us__image"
+              src="./images/about-us-image.png"
+              alt="милая картинка"
+            />
+          </picture>
+
+          <div class="about-us__wrapper">
+            <h2 class="about-us__header">About us</h2>
+            <p class="about-us-text">
+              Oh My Donut is the shop which adores tasty deserts and spend hours
+              to create sophisticated donuts which will save the world!
+            </p>
+            <p class="about-us-text">
+              Eva has been baking since she was six years old and over the last
+              49 years, she has created hundreds of cakes for weddings and has
+              baked for many celebrities. Eva and our shop have received
+              multiple awards & recognition for excellence.
+            </p>
+
+            <p class="about-us-text" id="rest-text__about-us">
+              We are going to teach you how to cook with passion and sparkles in
+              your eyes! We love what we do and believe you will enjoy our
+              cooking atmosphere!
+            </p>
+
+            <button class="btn-read-more" id="btn_read_more_about-us">
+              Read more
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- ПРОГРАММА -->
+      <section class="programm" id="program">
+        <div class="conteiner program_comtainer">
+          <div class="wrapper__program">
+            <h2 class="program__header">Program</h2>
+            <p class="program__text">
+              Indulge in this immersive sweet treat experience with The Chef
+              Donut Queen in her New York donut shop!
+            </p>
+            <ul class="program__list">
+              <li class="list_item program_list_item">
+                A stand up history of donuts
+              </li>
+              <li class="list_item program_list_item">
+                Make 3 donut flavors of your choice
+              </li>
+              <li class="list_item program_list_item">
+                Enjoy all-you-can-eat donuts
+              </li>
+              <li class="list_item program_list_item">
+                Cocktail pairings and coffee included
+              </li>
+              <li class="list_item program_list_item">
+                Photoshoot by professional photographer
+              </li>
+              <li class="list_item program_list_item">
+                Secret receipt of cooking from Eva
+              </li>
+              <li class="list_item program_list_item">
+                All products are included in the price
+              </li>
+            </ul>
+
+            <p class="program__text" id="rest-text__program">
+              Come with your dear people and friends and you will spend an
+              unforgettable time and will become a real professional in donuts
+              cooking!
+            </p>
+
+            <button
+              class="btn-read-more btn_read_more_program"
+              id="btn_read_more_program"
+            >
+              Read more
+            </button>
+          </div>
+          <ul class="program__gallary">
+            <li class="program__gallary__item">
+              <div class="program__gallary__caption">
+                Type of the event <span> Cooking classes </span>
+              </div>
+            </li>
+            <li class="program__gallary__item">
+              <div class="program__gallary__caption">
+                Number of guests <span>1 to 20</span>
+              </div>
+            </li>
+            <li class="program__gallary__item">
+              <div class="program__gallary__caption">
+                Time of the event <span>18:30 (2.5 hours) </span>
+              </div>
+            </li>
+            <li class="program__gallary__item">
+              <div class="program__gallary__caption">
+                The host speaks <span> English, French </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- СПИКЕРЫ -->
+      <section class="speakers" id="speaker">
+        <div class="conteiner">
+          <h2 class="speaker__header">Speakers</h2>
+          <ul class="speaker__list">
+            <li class="speaker__item">
+              <img
+                class="speaker__foto"
+                src="./images/Speaker1.png"
+                alt="фото спикера"
+              />
+              <p class="speaker__name">Molly Rivera</p>
+              <p class="speaker__scill">
+                Pastry chef, master chocolatier of Spain
+              </p>
+            </li>
+            <li class="speaker__item">
+              <img
+                class="speaker__foto"
+                src="./images/Speaker2.png"
+                alt="фото спикера"
+              />
+              <p class="speaker__name">Sophia Clark</p>
+              <p class="speaker__scill">Сulinary school pastry chef</p>
+            </li>
+            <li class="speaker__item">
+              <img
+                class="speaker__foto"
+                src="./images/Speaker3.png"
+                alt="фото спикера"
+              />
+              <p class="speaker__name">Isabella Taylor</p>
+              <p class="speaker__scill">
+                Сonsultant in the art of confectionery
+              </p>
+            </li>
+            <li class="speaker__item">
+              <img
+                class="speaker__foto"
+                src="./images/Speaker4.png"
+                alt="фото спикера"
+              />
+              <p class="speaker__name">Evelyn Miller</p>
+              <p class="speaker__scill">Master-chocolatier in Spain</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ЦЕНІ -->
+      <section class="price" id="price">
+        <div class="conteiner">
+          <h2 class="price__header">Price</h2>
+
+          <ul class="price__list">
+            <li class="price__item">
+              <span class="price__caption">Easy start</span>
+
+              <ul class="price__option">
+                <li class="list_item price__list_item">
+                  features of yeast dough preparation
+                </li>
+                <li class="list_item price__list_item">
+                  preparation of liquid caramel for stuffing
+                </li>
+                <li class="list_item price__list_item">
+                  preparation of raspberry and strawberry filling
+                </li>
+                <li class="list_item price__list_item">fry and glaze donuts</li>
+              </ul>
+              <button class="button price__button" type="button">
+                Register
+              </button>
+            </li>
+
+            <li class="price__item">
+              <span class="price__caption"> I want delicious donuts </span>
+
+              <ul class="price__option">
+                <li class="list_item price__list_item">
+                  features of yeast dough preparation
+                </li>
+                <li class="list_item price__list_item">
+                  preparation of liquid caramel for stuffing
+                </li>
+                <li class="list_item price__list_item">
+                  preparation of raspberry and strawberry filling
+                </li>
+                <li class="list_item price__list_item">fry and glaze donuts</li>
+                <li class="list_item price__list_item">
+                  melt chocolate for decoration
+                </li>
+                <li class="list_item price__list_item">
+                  donut decoration. painting and various techniques
+                </li>
+              </ul>
+
+              <button class="button price__button" type="button">
+                Register
+              </button>
+            </li>
+
+            <li class="price__item">
+              <span class="price__caption"> Premium </span>
+
+              <ul class="price__option">
+                <li class="list_item price__list_item">
+                  features of yeast dough preparation
+                </li>
+                <li class="list_item price__list_item">
+                  preparation of liquid caramel for stuffing
+                </li>
+                <li class="list_item price__list_item">
+                  preparation of raspberry and strawberry filling
+                </li>
+                <li class="list_item price__list_item">fry and glaze donuts</li>
+                <li class="list_item price__list_item">
+                  melt chocolate for decoration
+                </li>
+                <li class="list_item price__list_item">
+                  donut decoration. painting and various techniques
+                </li>
+                <li class="list_item price__list_item">
+                  2 private lessons with one of the speakers
+                </li>
+              </ul>
+              <button class="button price__button" type="button">
+                Register
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ОТЗЫВЫ -->
+      </section>
+      <section class="reviews" id="peviws">
+        <div class="conteiner">
+          <h2 class="review__header">Reviews</h2>
+
+          <ul class="rewiews__list">
+            
+            <li class="reviews__item">
+              <div class="preview">
+              <img
+                class="review__foto"
+                src="./images/review3.png"
+                alt="фото человека"
+              />
+              <p class="reviews__star">
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+              </p>
+
+              <p class="reviews_name">John</p>
+              </div>
+              <p class="reviews__text notInPreviw" > 
+                Буфет - это большие порции , домашняя атмосфера , доступные
+                цены, а главное - приятный персонал . Меня обогрели после дождя
+                вкусным кофе и борщем
+              </p>
+            </li >
+            <li class="reviews__item">
+              <div class="preview">
+              <img
+                class="review__foto"
+                src="/images/review1.png"
+                alt="фото человека"
+              />
+              <p class="reviews__star">
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star-empty"></use>
+                </svg>
+              </p>
+              <p class="reviews_name">Will</p>
+              </div>
+              <p class="reviews__text notInPreviw" >
+                Не знаю чем заведение заработало такой хороший рейтинг..в целом
+                обыкновенное нормальное заведение. Тихо, спокойно. Но вот еду
+                нам принесли полу сырую. Дыруны горячие, но картошка внутри
+                практически сырая. Не рекомендую
+              </p>
+            </li>
+            <li class="reviews__item">
+              <div class="preview" >
+              <img
+                class="review__foto"
+                src="/images/review2.png"
+                alt="фото человека"
+              />
+              <p class="reviews__star">
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+              </p>
+              <p class="reviews_name">Samanta</p>
+              </div>
+              <p class="reviews__text notInPreviw" >
+                Отвела детей на ДР поблизости. Случайно увидела вывеску. Приятно
+                удивлена. Хорошее место выпить кофе с десертом, а можно выбрать
+                и полный обед. Хорошая буфетная система с обширным выбором блюд.
+                Если вы с детьми Буфет также станет прекрасным местом для еды.
+                Также имеется отличная открытая терраса. Рекомендую.
+              </p>
+            </li>
+            <li class="reviews__item ">
+               <div class="preview" >
+              <img
+                class="review__foto"
+                src="/images/donut1.jpg"
+                alt="фото человека"
+              />
+              <p class="reviews__star">
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+              </p>
+              <p class="reviews_name">Baby</p>
+              </div>
+              <p class="reviews__text notInPreviw" >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Maxime, ducimus nesciunt adipisci laboriosam nostrum excepturi
+                possimus dolore perspiciatis delectus illum! Veritatis vitae
+                eaque harum tenetur, accusantium id molestiae inventore in?
+              </p>
+            </li>
+            <li class="reviews__item " >
+              
+              <div class="preview" >
+              <img
+                class="review__foto"
+                src="/images/donut2.jpg"
+                alt="фото человека"
+              />
+              <p class="reviews__star">
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+              </p>
+              <p class="reviews_name">Cutie</p>
+              </div>
+              <p class="reviews__text notInPreviw" >
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus vel odit veritatis omnis voluptate, aspernatur id
+                recusandae culpa odio modi libero qui ab corrupti, eum quae,
+                molestiae inventore deleniti minima.
+              </p>
+            </li>
+            <li class="reviews__item ">
+               <div class="preview" >
+              <img
+                class="review__foto"
+                src="/images/donut3.jpg"
+                alt="фото человека"
+              />
+              <p class="reviews__star">
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <svg class="star" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-star"></use>
+                </svg>
+              </p>
+              <p class="reviews_name">Grandma</p>
+              <p class="reviews__text notInPreviw" >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                dolorem rerum atque? Saepe libero voluptatum quo nulla ipsam, ex
+                dolores magnam voluptatem? Repudiandae nesciunt, iusto adipisci
+                fugiat quas expedita laborum!
+              </p>
+            </li>
+          </ul>
+          <p class="reviews__counter">2/6</p>
+        </div>
+      </section>
+
+      <!-- ФОРМА РЕГИСТРАЦИИ -->
+      <section class="registration">
+        <div class="conteiner">
+          <h2 class="registration__header">Registration</h2>
+
+          <form action="" class="registration__form">
+            <div class="wrapper1__registration_form">
+              <time class="registration__data" datetime="2022-05-23T11:00"
+                >May 23, 11:00</time
+              ><br />
+              <span class="registration__place">New York</span>
+            </div>
+
+            <div class="wrapper2__registration_form">
+              <h3 class="registration_header">
+                Apply your personal info for registration
+              </h3>
+
+              <input
+                class="registration_input"
+                type="text"
+                placeholder="Your name"
+              />
+
+              <input
+                class="registration_input"
+                type="text"
+                placeholder="Phone number"
+              />
+
+              <input
+                class="registration_input"
+                type="text"
+                placeholder="Email"
+              />
+            </div>
+            <button class="button registration__button" type="button">
+              Register
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="conteiner contact__conteiner">
+          <h2 class="contact__header">Contact</h2>
+          <p class="contact__text">We will answer any question!</p>
+          <form class="contact__form">
+            <label class="contact__label">
+              Email
+              <input class="contact__input" type="text" />
+            </label>
+            <input
+              class="contact__question"
+              type="text"
+              placeholder="Type your question"
+            />
+          </form>
+        </div>
+        <button class="button contact_button" type="button">Send</button>
+
+        <ul class="solial-net contact__solial-net">
+          <li class="social-net__item">
+            <svg class="solial-net__icon" width="16px" height="16px">
+              <use href="./images/symbol-defs.svg#icon-twitter"></use>
+            </svg>
+          </li>
+          <li class="social-net__item">
+            <svg class="solial-net__icon" width="16px" height="16px">
+              <use href="./images/symbol-defs.svg#icon-instagram"></use>
+            </svg>
+          </li>
+          <li class="social-net__item">
+            <svg class="solial-net__icon" width="16px" height="16px">
+              <use href="./images/symbol-defs.svg#icon-facebook"></use>
+            </svg>
+          </li>
+        </ul>
+
+        <div class="contact-wrapper">
+          <a class="contact__tel" href="tel:910222-8855">(910)222-8855</a>
+          <a
+            class="contact__adress"
+            href="https://goo.gl/maps/1EEv7HRwzFBiN7yJ9"
+            >New York</a
+          >
+        </div>
+        <div class="contact__final"></div>
+      </section>
+    </main>
+    <script src="./js/js.js"></script>
+  </body>
+</html>
