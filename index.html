@@ -50,34 +50,7 @@
           </div>
         </nav>
 
-        <script>
-          const btn__bm = document.querySelector(".burger-menu");
-          const menu = document.querySelector(".main-navigavion-list");
-          const logo = document.querySelector(".logo");
-
-          btn__bm.addEventListener("click", (event) => {
-            menu.classList.toggle("open-menu");
-            setTimeout(() => btn__bm.classList.toggle("z-index__3"), 500);
-            setTimeout(() => logo.classList.toggle("z-index__3"), 500);
-            setTimeout(() => btn__bm.classList.toggle("bm__transform"), 500);
-            document.body.classList.toggle("scroll");
-          });
-          document
-            .querySelector(".main-navigavion-list")
-            .addEventListener("click", (e) => {
-
-              console.log(e.target.nodeName);
-              if (e.target.nodeName !== "A") return;
-              menu.classList.remove("open-menu");
-              document.body.classList.remove("scroll");
-              btn__bm.classList.remove("z-index__3");
-              logo.classList.remove("z-index__3");
-              btn__bm.classList.remove("bm__transform");
-
-            });
-        </script>
-
-        <h1 class="header_header">
+               <h1 class="header_header">
           Donut Masterclass <br />
           with the Donut King
         </h1>
@@ -282,9 +255,11 @@
                 </li>
                 <li class="list_item price__list_item">fry and glaze donuts</li>
               </ul>
-              <button class="button price__button" type="button">
-                Register
-              </button>
+              <a class="list_ref" href="#registration">
+                <button class="button price__button" type="button">
+                  Register
+                </button>
+              </a>
             </li>
 
             <li class="price__item">
@@ -308,10 +283,10 @@
                   donut decoration. painting and various techniques
                 </li>
               </ul>
-
+              <a class="list_ref" href="#registration">
               <button class="button price__button" type="button">
                 Register
-              </button>
+              </button></a>
             </li>
 
             <li class="price__item">
@@ -338,9 +313,10 @@
                   2 private lessons with one of the speakers
                 </li>
               </ul>
+              <a class="list_ref" href="#registration">
               <button class="button price__button" type="button">
                 Register
-              </button>
+              </button></a>
             </li>
           </ul>
         </div>
@@ -378,7 +354,7 @@
                 </svg>
               </p>
 
-              <p class="reviews_name">John</p>
+              <p class="reviews_name">Shortly</p>
               </div>
               <p class="reviews__text notInPreviw" > 
                 Буфет - это большие порции , домашняя атмосфера , доступные
@@ -386,6 +362,7 @@
                 вкусным кофе и борщем
               </p>
             </li >
+    <!--  -->
             <li class="reviews__item">
               <div class="preview">
               <img
@@ -410,7 +387,7 @@
                   <use href="./images/symbol-defs.svg#icon-star-empty"></use>
                 </svg>
               </p>
-              <p class="reviews_name">Will</p>
+              <p class="reviews_name">Samanta</p>
               </div>
               <p class="reviews__text notInPreviw" >
                 Не знаю чем заведение заработало такой хороший рейтинг..в целом
@@ -419,6 +396,7 @@
                 практически сырая. Не рекомендую
               </p>
             </li>
+    <!--  -->
             <li class="reviews__item">
               <div class="preview" >
               <img
@@ -443,7 +421,7 @@
                   <use href="./images/symbol-defs.svg#icon-star"></use>
                 </svg>
               </p>
-              <p class="reviews_name">Samanta</p>
+              <p class="reviews_name">Will</p>
               </div>
               <p class="reviews__text notInPreviw" >
                 Отвела детей на ДР поблизости. Случайно увидела вывеску. Приятно
@@ -453,6 +431,7 @@
                 Также имеется отличная открытая терраса. Рекомендую.
               </p>
             </li>
+    <!--  -->
             <li class="reviews__item ">
                <div class="preview" >
               <img
@@ -486,8 +465,8 @@
                 eaque harum tenetur, accusantium id molestiae inventore in?
               </p>
             </li>
-            <li class="reviews__item " >
-              
+    <!--  -->
+            <li class="reviews__item " >              
               <div class="preview" >
               <img
                 class="review__foto"
@@ -520,6 +499,7 @@
                 molestiae inventore deleniti minima.
               </p>
             </li>
+    <!--  -->
             <li class="reviews__item ">
                <div class="preview" >
               <img
@@ -552,15 +532,16 @@
                 fugiat quas expedita laborum!
               </p>
             </li>
+
           </ul>
           <p class="reviews__counter">2/6</p>
         </div>
       </section>
 
       <!-- ФОРМА РЕГИСТРАЦИИ -->
-      <section class="registration">
+      <section class="registration" >
         <div class="conteiner">
-          <h2 class="registration__header">Registration</h2>
+          <h2 class="registration__header" id ="registration">Registration</h2>
 
           <form action="" class="registration__form">
             <div class="wrapper1__registration_form">
@@ -647,6 +628,7 @@
         <div class="contact__final"></div>
       </section>
     </main>
+     <script src="./js/burger.js"></script>
     <script src="./js/js.js"></script>
   </body>
 </html>

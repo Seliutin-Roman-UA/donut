@@ -125,12 +125,12 @@ const myData = {
     this.numberFromMumbers();
   },
 };
-document.addEventListener("DOMContentLoaded", () => {
-  myData.move(window.innerWidth);
-  console.log("DOM loaded");
-});
+document.addEventListener("DOMContentLoaded", () =>
+  myData.move(window.innerWidth)
+);
 
-console.log("my = ", myData);
+console.log("my = ", myData.nextPosition());
+window.addEventListener("resize", () => myData.move(window.innerWidth));
 
 myData.list.addEventListener("click", (e) => {
   console.log("my = ", myData);

@@ -42,10 +42,10 @@
   border-radius: 25px;
   background-image: url("../images/price-bg.png");
   background-position: center bottom 95px;
-background-repeat: no-repeat;
-background-size: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
   @media screen and (min-width: 767.99px) {
-      min-height: 610px;
+    min-height: 610px;
     width: 225px;
   }
   @media screen and (min-width: 1279.99px) {
@@ -74,6 +74,10 @@ background-size: contain;
   & + & {
     margin-top: 16px;
   }
+}
+.list_ref {
+  margin-top: auto;
+  text-align: center;
 }
 .price__button {
   align-self: center;

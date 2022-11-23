@@ -156,6 +156,7 @@ button:hover {
 
 .main-navigavion-list {
   transform: translateY(-100%);
+  transition: transform 500ms;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -727,6 +728,11 @@ button:hover {
 }
 .price__list_item + .price__list_item {
   margin-top: 16px;
+}
+
+.list_ref {
+  margin-top: auto;
+  text-align: center;
 }
 
 .price__button {
